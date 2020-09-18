@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+  <title>
+    Enter Name JavaScript
+  </title>
+  <script>
+  	greeting = '';
+    function setGreeting(choice) {
+    	greeting = choice;
+    }
+    function giveGreeting() {
+    	document.getElementById('yourGreeting').value = greeting + " " + document.getElementById('yourName').value;
+    }
+  </script>
+</head>
+
+<body>
+    <h2> Enter Name </h2>
+    <p> <b>1.</b> Enter your name: <input type = "text" id = "yourName" name = "yourName" size = "40"> </p>
+    <p> <b>2.</b> Select your greeting: <input type = "button" value = "Hello" id = "helloButton" name = "helloButton" onclick = "setGreeting(document.getElementById('helloButton').value)" > <input type = "button" value = "Howdy" id = "howdyButton" name = "howdyButton" onclick = "setGreeting(document.getElementById('howdyButton').value)"> <input type = "button" value = "Greetings" id = "greetingsButton" name = "greetingsButton" onclick = "setGreeting(document.getElementById('greetingsButton').value)"> </p>
+    <p> <b>3.</b> Click here when done: <input type = "button" value = "Done" name = "doneButton" onclick = "giveGreeting()"> </p>
+    <p> <b>4.</b> Your personalized greeting: <input type = "text" id = "yourGreeting" name = "yourGreeting" size = "40"> </p>
+</body>
+
+</html>

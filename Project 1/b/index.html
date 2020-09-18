@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>
+    Number Build JavaScript
+  </title>
+  <script>
+      var totalSum = 0;
+    function changeTotal(num) {
+    	if (document.getElementById(num).checked== true) {
+      	totalSum += parseInt(document.getElementById(num).value);
+      }
+      else {
+        totalSum -= parseInt(document.getElementById(num).value);
+      }
+
+      if (totalSum == 1925) {
+        document.getElementById('lake').style.visibility = "visible";
+      }
+      else if (totalSum != 1925) {
+        document.getElementById('lake').style.visibility = "hidden";
+      }
+      document.getElementById('total').value = totalSum;
+    }
+
+  </script>
+</head>
+
+<body>
+  <h2>Number Builder</h2>
+  <p>Select numbers to include in the total by clicking on the box to its left. If you select a sum that adds up to the year that the University of Miami was founded, you will get a special surprise!</p>
+  <p> <input type = checkbox id = "4" name = "4" value = "4" onclick = "changeTotal(document.getElementById('4').value)"> 4</p>
+  <p> <input type = checkbox id = "7" name = "7" value = "7" onclick = "changeTotal(document.getElementById('7').value)"> 7</p>
+  <p> <input type = checkbox id = "16" name = "16" value = "16" onclick = "changeTotal(document.getElementById('16').value)"> 16</p>
+  <p> <input type = checkbox id = "31" name = "31" value = "31" onclick = "changeTotal(document.getElementById('31').value)"> 31</p>
+  <p> <input type = checkbox id = "41" name = "41" value = "41" onclick = "changeTotal(document.getElementById('41').value)"> 41</p>
+  <p> <input type = checkbox id = "89" name = "89" value = "89" onclick = "changeTotal(document.getElementById('89').value)"> 89</p>
+  <p> <input type = checkbox id = "900" name = "900" value = "900" onclick = "changeTotal(document.getElementById('900').value)"> 900</p>
+  <p> <input type = checkbox id = "1890" name = "1890" value = "1890" onclick = "changeTotal(document.getElementById('1890').value)"> 1890</p>
+  <p> -------------------  </p>
+  <p> Total: <output name = "total" id = "total"> </output> </p>
+
+  <p> <img src = "/Users/allegrapapera/Desktop/CSC401/Project 1/b/lake.jpg" id = "lake" height = 200 width = 400 style = "visibility:hidden"> </p>
+
+ 
+</body>
+
+</html>
